@@ -4,23 +4,47 @@
 
 \_\_\_\_en
 To do any command in the terminal, you have to follow this rule :
-`[command name] [ARG]*`
+
+```bash
+	[command name] [ARG]*
+```
+
 That means, you write the command name first, put a space, then, add as many arguments as you need on the command line.
 
 Here for example :
-`pwett cc bob`
+
+```bash
+	pwett cc bob
+```
+
 the command \[pwett] have been launched with two arguments, \[cc] and \[bob]
-`pwett`
+
+```bash
+	pwett
+```
+
 the command \[pwett] have been launched with no arguments.
 \_\_\_\_fr
 Pour utiliser une commande dans le terminal, tu dois suivre les règles suivantes :
-`[Nom de la commande] [ARG]*`
+
+```bash
+	[Nom de la commande] [ARG]*
+```
+
 Cela veud dire que tu dois d'abord noter le nom de la commande, un espace, et ajouter autant d'arguments que tu veux, toujours séparés par des espaces sur la ligne de commande.
 
 Par example :
-`pwett cc bob`
+
+```bash
+	pwett cc bob
+```
+
 la commande \[pwett] a été lancée avec 2 arguments \[cc] et \[bob]
-`pwett`
+
+```bash
+	pwett
+```
+
 la commande \[pwett] a été lancée sans arguments.
 
 ## GIT
@@ -29,21 +53,31 @@ la commande \[pwett] a été lancée sans arguments.
 
 ### Voir les fichiers que tu es sur le point de sauvegqrder sur ta machine :
 
-`git status`
+```bash
+	git status
+```
 
 ### Save your work on your computer :
 
 ### Faire des sauvegarde de votre travail, localement :
 
-`git add *`
+```bash
+	git add *
+```
+
 or
-`git add thePath/MyFile.extension`
+
+```bash
+	git add thePath/MyFile.extension
+```
 
 ### Save your staged work :
 
 ### sauvegarder ton taf mis dans la sauvegarde grace a git add:
 
-`git commit -m"Put here a comment saying what you did on that save"`
+```bash
+	git commit -m"Put here a comment saying what you did on that save"
+```
 
 You can technically put an empty comment, please refrain to do so.
 Vous pouvez techniquement ne pas mettre de commentaire, merci d'en mettre un quand même.
@@ -52,13 +86,17 @@ Vous pouvez techniquement ne pas mettre de commentaire, merci d'en mettre un qua
 
 ### Envoyer tes sauvegardes locales sur github :
 
-`git push`
+```bash
+	git push
+```
 
 ### Get your friends online saves:
 
 ### Récupèrer les sauvegarde des tes partenaires :
 
-`git pull`
+```bash
+	git pull
+```
 
 ### cd
 
@@ -107,9 +145,17 @@ npm run allows you to run scripts that exists in the package.json file where you
 
 Those are script you can call by npm run.
 So you can do :
-`npm run dev`
+
+```bash
+	npm run dev
+```
+
 or
-`npm run build`
+
+```bash
+	npm run build
+
+```
 
 this other one you won't really want to use them so far.
 
@@ -128,9 +174,16 @@ npm te permet de lancer des scripts qui existent dans le fichier package.json ou
 
 Ce sont des scripts que tu peux lancer, en les préfixant avec npm run :
 Donc tu peux faire :
-`npm run dev`
+
+```bash
+	npm run dev
+```
+
 ou
-`npm run build`
+
+```bash
+	npm run build
+```
 
 ce dernier tu voudras pas vraiment l'utiliser pour le moment.
 
@@ -143,7 +196,11 @@ le script dev te permet de lancer le projet dans le cadre de son développement,
 \_\_\_\_en
 
 As said up there, you can launch the app from ./front by doing
-`npm run dev`
+
+```bash
+	npm run dev
+```
+
 then, you can see what it does by doing there :
 http://localhost:5173/
 
@@ -152,7 +209,11 @@ once your started the "development server" you can do changes in the code from .
 \_\_\_\_fr
 
 Comme dit plus haut, tu peux lancer l'app depuis ./front en faisant
-`npm run dev`
+
+```bash
+	npm run dev
+```
+
 ensuite, tu peux voir ce que ça fait en allant ici :
 http://localhost:5173/
 
