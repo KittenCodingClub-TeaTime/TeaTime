@@ -3,6 +3,7 @@
 # command line terminal
 
 \_\_\_\_en
+
 To do any command in the terminal, you have to follow this rule :
 
 ```bash
@@ -24,7 +25,9 @@ the command \[pwett] have been launched with two arguments, \[cc] and \[bob]
 ```
 
 the command \[pwett] have been launched with no arguments.
+
 \_\_\_\_fr
+
 Pour utiliser une commande dans le terminal, tu dois suivre les règles suivantes :
 
 ```bash
@@ -116,10 +119,12 @@ Te donne la position exacte de ou se trouve ton terminal par rapport a tes fichi
 ### npm
 
 \_\_\_\_en
+
 npm is a CLI : a Command Line Interface, that mean that, similarly to cd, git, ls, pwd, and so much more, it will do action for you given certains arguments.
 This CLI will help you run javascript code, download dependencies, use scripts...
 
 \_\_\_\_fr
+
 npm est un CLI: Une interface en ligne de commande, c'est pas bien différent de cd, git, ls, pwd, et d'autres, c'est juste un outil qui te permet de faire des trucs directement depuis le terminal, selon les arguments que tu lui donne.
 Ce CLI va t'aider a lancer du code javascript, télécharger des dépendances (librairies), lancer des scripts...
 
@@ -132,6 +137,7 @@ Si tu veux lancer le projet localement (sans docker), tu devras d'abord installe
 #### npm run
 
 \_\_\_\_en
+
 npm run allows you to run scripts that exists in the package.json file where you are, from ./front, you can see that you have this :
 "scripts": {
 "dev": "tsc && vite -- host",
@@ -160,7 +166,9 @@ or
 this other one you won't really want to use them so far.
 
 dev allows you to run the project for development purpose, where build is for "production purpose", we will see that later.
+
 \_\_\_\_fr
+
 npm te permet de lancer des scripts qui existent dans le fichier package.json ou tu te trouve, par exemple, depuis ./front, tu as ceci :
 "scripts": {
 "dev": "tsc && vite -- host",
