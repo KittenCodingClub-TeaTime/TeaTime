@@ -5,24 +5,40 @@ import './App.css';
 function App() {
   const [count, setCount] = useState(0);
   const [ajouter, setajouter] = useState(0);
-  let fun1 =()=>42;
-  let fun2 = ()=> {
-    return 42;
+  const [enplus, setEnplus] = useState('patate');
+  let fun1 = () => 42;
+  let fun2 = () => {
+    return 'NYA';
   };
-  let fun3 = ()=> {console.log(88)
-  return 96;
+  let fun3 = () => {
+    console.log(88);
+    return 96;
+  };
+
+  let result = fun1();
+  console.log(result);
+
+  console.log(fun2());
+
+  let fun4 = (pwet: any) => {
+    return pwet + 2;
+  };
+  let i = 0;
+  while (i < 10) {
+    i = fun4(i);
+    console.log(i);
   }
-  let fun4 = (pwet:any)=>{
-    return pwet +2;
+
+  let fun5 = (pwet: any, other: any) => {
+    return pwet + 2;
+  };
+  let fun6 = function () {};
+  function fun7() {
+    return 42;
   }
-  let fun5 = (pwet:any,other:any)=>{
-    return pwet +2;
-  }
-  let fun6 = function(){}
-  function fun7 (){return 42}
-// setCount(()=>42);
-// setCount(fun1);
-console.log(33,fun6)
+  // setCount(()=>42);
+  // setCount(fun1);
+  console.log(33, fun4);
   return (
     <div className="App">
       <header className="App-header">
@@ -67,6 +83,19 @@ console.log(33,fun6)
             count is: {count}poney
           </button>
         </p>
+        {/* un deux troi */}
+        <button
+          className="water-button"
+          type="button"
+          onClick={() =>
+            setEnplus((nya) => {
+              return nya + ' nya';
+            })
+          }
+        >
+          Compteur de : {enplus} etoile de mer
+        </button>
+        {/* un deux troi */}
         <p>
           <a
             className="App-link"
