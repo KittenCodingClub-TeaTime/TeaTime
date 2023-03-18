@@ -131,10 +131,31 @@ function App() {
           >
             Template repository
           </a>
+          <Welcome Name="mochis" Modificateur={1} Depart={0} Couleur="water-button" />
+          <Welcome Name="cookies" Modificateur={1} Depart="pao" Couleur="rainbow-button" />
+          <Welcome Name="poney" Modificateur="love" Depart="love" Couleur="rainbow-button" />
+          <Welcome Name="etoile de mer" Modificateur={1} Depart={0} Couleur="water-button" />
         </p>
       </header>
     </div>
   );
 }
 
+function Welcome(props: { Name: String; Modificateur: String | Number; Depart: String | Number; Couleur: String }) {
+  const [ajouter, setajouter] = useState(props.Depart);
+  return (
+    <button
+      className={props.Couleur}
+      type="button"
+      onClick={() =>
+        setajouter((preajouter: string | number) => {
+          return preajouter + props.Modificateur;
+        })
+      }
+    >
+      count is:{ajouter}
+      {props.Name}
+    </button>
+  );
+}
 export default App;
