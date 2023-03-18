@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Merbouton from './component/Merbouton';
+import { Welcome as Bonjour } from './component/Merbouton';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -42,7 +44,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <img src={logo} className="App-logo" alt="logo" />
         <p>Vite + React + soupe + Airbnb + Husky = 🔥</p>
         <p>
           <button
@@ -86,8 +88,15 @@ function App() {
         {/* un deux troi */}
 
         {/* un deux troi */}
-        <merbouton name="nya" />
-        <Welcome name="Arielle" />
+        <Merbouton debut="nya" couleur="water-button" name="sirene" modificateur="Lol" />
+
+        <Merbouton debut={1} couleur="rainbow-button" name="Cookies" modificateur={1} />
+
+        <Merbouton debut={58} couleur="water-button" name="Poney" modificateur="Petit chat" />
+
+        <Merbouton debut="LOL" couleur="rainbow-button" name="Mochi" modificateur={1} />
+
+        <Bonjour name="Arielle" />
 
         <p>
           <a
@@ -127,27 +136,6 @@ function App() {
         </p>
       </header>
     </div>
-  );
-}
-
-function Welcome(props) {
-  return <h1>Bonjour, {props.name}</h1>;
-}
-
-function merbouton(props) {
-  const [enplus, setEnplus] = useState('patate');
-  return (
-    <button
-      className="water-button"
-      type="button"
-      onClick={() =>
-        setEnplus((nya) => {
-          return nya + ' nya';
-        })
-      }
-    >
-      Compteur de : {enplus} {props.name}
-    </button>
   );
 }
 
