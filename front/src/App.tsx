@@ -141,14 +141,14 @@ function App() {
   );
 }
 
-function Welcome(props: { Name: String; Modificateur: String | Number; Depart: String | Number; Couleur: String }) {
+function Welcome(props: { Name: string; Modificateur: string | Number; Depart: string | Number; Couleur: string }) {
   const [ajouter, setajouter] = useState(props.Depart);
   return (
     <button
       className={props.Couleur}
       type="button"
       onClick={() =>
-        setajouter((preajouter: string | number) => {
+        setajouter((preajouter: any) => {
           return preajouter + props.Modificateur;
         })
       }
