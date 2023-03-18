@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   const [count, setCount] = useState(0);
   const [ajouter, setajouter] = useState(0);
-  const [enplus, setEnplus] = useState('patate');
+
   let fun1 = () => 42;
   let fun2 = () => {
     return 'NYA';
@@ -84,18 +84,11 @@ function App() {
           </button>
         </p>
         {/* un deux troi */}
-        <button
-          className="water-button"
-          type="button"
-          onClick={() =>
-            setEnplus((nya) => {
-              return nya + ' nya';
-            })
-          }
-        >
-          Compteur de : {enplus} etoile de mer
-        </button>
+
         {/* un deux troi */}
+        <merbouton name="nya" />
+        <Welcome name="Arielle" />
+
         <p>
           <a
             className="App-link"
@@ -134,6 +127,27 @@ function App() {
         </p>
       </header>
     </div>
+  );
+}
+
+function Welcome(props) {
+  return <h1>Bonjour, {props.name}</h1>;
+}
+
+function merbouton(props) {
+  const [enplus, setEnplus] = useState('patate');
+  return (
+    <button
+      className="water-button"
+      type="button"
+      onClick={() =>
+        setEnplus((nya) => {
+          return nya + ' nya';
+        })
+      }
+    >
+      Compteur de : {enplus} {props.name}
+    </button>
   );
 }
 
