@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 function Welcome(props: { Name: string; Modificateur: string | number; Depart: string | number; Couleur: string }) {
+  const { Name, Modificateur, Depart, Couleur } = props;
   const [ajouter, setajouter] = useState(props.Depart);
   return (
     <button
@@ -18,4 +19,4 @@ function Welcome(props: { Name: string; Modificateur: string | number; Depart: s
   );
 }
 
-export default Parametyseredbutton ;
+export default Welcome;

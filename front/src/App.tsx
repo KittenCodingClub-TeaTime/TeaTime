@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Welcome from './compenant/Parametyseredbutton';
+import ChatB from './compenant/ChatB';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -43,9 +45,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <ChatB></ChatB>
         <p>Vite + React + soupe + Airbnb + Husky = 🔥</p>
         <p>
-          <button
+          {/* <button
             className="rainbow-button"
             type="button"
             onClick={
@@ -62,10 +65,10 @@ function App() {
             }
           >
             count is: {ajouter}cookies
-          </button>
+          </button> */}
           <br />
           <br />
-          <button
+          {/* <button
             className="rainbow-button"
             type="button"
             onClick={() =>
@@ -81,10 +84,10 @@ function App() {
             }
           >
             count is: {count}poney
-          </button>
+          </button> */}
         </p>
         {/* un deux troi */}
-        <button
+        {/* <button
           className="water-button"
           type="button"
           onClick={() =>
@@ -94,7 +97,7 @@ function App() {
           }
         >
           Compteur de : {enplus} etoile de mer
-        </button>
+        </button> */}
         {/* un deux troi */}
         <p>
           <a
@@ -131,31 +134,14 @@ function App() {
           >
             Template repository
           </a>
-          <Welcome Name="mochis" Modificateur={1} Depart={0} Couleur="water-button" />
+          {/* <Welcome Name="mochis" Modificateur={1} Depart={0} Couleur="water-button" />
           <Welcome Name="cookies" Modificateur={1} Depart="pao" Couleur="rainbow-button" />
           <Welcome Name="poney" Modificateur="love" Depart="love" Couleur="rainbow-button" />
-          <Welcome Name="etoile de mer" Modificateur={1} Depart={0} Couleur="water-button" />
+          <Welcome Name="etoile de mer" Modificateur={1} Depart={0} Couleur="water-button" /> */}
         </p>
       </header>
     </div>
   );
 }
 
-function Welcome(props: { Name: string; Modificateur: string | Number; Depart: string | Number; Couleur: string }) {
-  const [ajouter, setajouter] = useState(props.Depart);
-  return (
-    <button
-      className={props.Couleur}
-      type="button"
-      onClick={() =>
-        setajouter((preajouter: any) => {
-          return preajouter + props.Modificateur;
-        })
-      }
-    >
-      count is:{ajouter}
-      {props.Name}
-    </button>
-  );
-}
 export default App;
