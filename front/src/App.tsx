@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Merbouton from './component/Merbouton';
 import { Welcome as Bonjour } from './component/Merbouton';
+import Chat from './component/Chat';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -44,10 +45,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Chat></Chat>
+
         <img src={logo} className="App-logo" alt="logo" />
         <p>Vite + React + soupe + Airbnb + Husky = 🔥</p>
         <p>
-          <button
+          {/* <button
             className="rainbow-button"
             type="button"
             onClick={
@@ -64,10 +67,10 @@ function App() {
             }
           >
             count is: {ajouter}cookies
-          </button>
+          </button> */}
           <br />
           <br />
-          <button
+          {/* <button
             className="rainbow-button"
             type="button"
             onClick={() =>
@@ -83,12 +86,12 @@ function App() {
             }
           >
             count is: {count}poney
-          </button>
+          </button> */}
         </p>
         {/* un deux troi */}
 
         {/* un deux troi */}
-        <Merbouton debut="nya" couleur="water-button" name="sirene" modificateur="Lol" />
+        {/* <Merbouton debut="nya" couleur="water-button" name="sirene" modificateur="Lol" />
 
         <Merbouton debut={1} couleur="rainbow-button" name="Cookies" modificateur={1} />
 
@@ -96,7 +99,7 @@ function App() {
 
         <Merbouton debut="LOL" couleur="rainbow-button" name="Mochi" modificateur={1} />
 
-        <Bonjour name="Arielle" />
+        <Bonjour name="Arielle" /> */}
 
         <p>
           <a
