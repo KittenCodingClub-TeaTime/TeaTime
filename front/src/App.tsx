@@ -50,8 +50,8 @@ function App() {
         <p>
           <br />
           {<Parameters Start={0} Color= "water-button" Add={1} Name="Cookies"></Parameters>
-          <Changes Deb= "Nya" Couleurs= "rainbow-button"Ajt= {2}N="Poney" ></Changes>
-          <Exerc Quiere= Colores= "rainbow-button" Nombre= {pwett} Appelido= "Magie" ></Exerc>}
+          <Changes Deb= "Nya" Couleurs= "rainbow-button"Ajt= {7} North="Poney" ></Changes>
+          <Exerc Quiere= {2} Colores= "rainbow-button" Nombre= {pwett} Appelido= "Magie" ></Exerc>}
           <br />
         </p>
         <p>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Parameters(props: { Start: string | number; Color: string; Add: number | string; Name: string }) {
+function Parameters(props: { Start: string | number; Color: string; Add: number | string; Name: string | number }) {
   const [ajouter, setajouter] = useState(props.Start);
   return (
     <button

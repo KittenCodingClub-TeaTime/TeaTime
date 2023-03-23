@@ -1,22 +1,24 @@
 import { useState } from 'react';
 
-
-function Excerc(props: {Quiere: String; Colores: String;   Nombre: Number | String; Appelido : String | Number}){
-    const [enplus, setEnplus] = useState(props.Quiere);
-return (
-
-
-<button
-    className= {props.Colores}
-  type="button"
-  onClick={() =>
-                setEnplus((nya) => {
-      return (nya + props.Nombre);
-    })          }
->
+function Excerc(props: {
+  Quiere: string | number;
+  Colores: string;
+  Nombre: number | string;
+  Appelido: string | number;
+}) {
+  const [enplus, setEnplus] = useState(props.Quiere);
+  return (
+    <button
+      className={props.Colores}
+      type="button"
+      onClick={() =>
+        setEnplus((nya: any) => {
+          return nya + props.Nombre;
+        })
+      }
+    >
       Compteur de : {enplus} {props.Appelido}
-</button>
+    </button>
+  );
 }
-)
-
 export default Excerc;
