@@ -5,8 +5,6 @@ import Welcome from './compenant/Parametyseredbutton';
 import ChatB from './compenant/ChatB';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   const [enplus, setEnplus] = useState('patate');
   let fun1 = () => 42;
   let fun2 = () => {
