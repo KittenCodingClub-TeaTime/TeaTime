@@ -6,7 +6,7 @@ import ChatB from './compenant/ChatB';
 
 function App() {
   const [count, setCount] = useState(0);
-  const [ajouter, setajouter] = useState(0);
+
   const [enplus, setEnplus] = useState('patate');
   let fun1 = () => 42;
   let fun2 = () => {
@@ -48,43 +48,8 @@ function App() {
         <ChatB></ChatB>
         <p>Vite + React + soupe + Airbnb + Husky = 🔥</p>
         <p>
-          {/* <button
-            className="rainbow-button"
-            type="button"
-            onClick={
-              () =>
-                setajouter((preajouter) => {
-                  return preajouter + 1;
-                })
-
-              // setCount(42)
-              // setCount((prevCount) => {
-              //   console.log(prevCount);
-              //   return prevCount + 10;
-              // })
-            }
-          >
-            count is: {ajouter}cookies
-          </button> */}
           <br />
           <br />
-          {/* <button
-            className="rainbow-button"
-            type="button"
-            onClick={() =>
-              setCount((prevCount) => {
-                let obj = { jeSuisUneClé: 1, itou: '2' };
-                let array = [1, 2, 3];
-                console.log(prevCount, obj, array);
-                console.log(prevCount);
-                obj.itou = '123soleil';
-                console.log(obj);
-                return prevCount + 1;
-              })
-            }
-          >
-            count is: {count}poney
-          </button> */}
         </p>
         {/* un deux troi */}
         {/* <button
