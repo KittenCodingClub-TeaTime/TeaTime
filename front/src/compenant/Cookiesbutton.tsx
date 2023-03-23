@@ -1,25 +1,27 @@
 import { useState } from 'react';
 
-function (){
-    const [ajouter, setajouter] = useState(0);
+function Parameters(props: { Start: string | number; Color: string; Add: number | string; Name: string }) {
+  const [ajouter, setajouter] = useState(props.Start);
+  return (
+    <button
+      className={props.Color}
+      type="button"
+      onClick={
+        () =>
+          setajouter((preajouter: any) => {
+            return preajouter + props.Add;
+          })
 
-
-<button
-  className="rainbow-button"
-  type="button"
-  onClick={
-    () =>
-      setajouter((preajouter) => {
-        return preajouter + 1;
-      })
-
-    // setCount(42)
-    // setCount((prevCount) => {
-    //   console.log(prevCount);
-    //   return prevCount + 10;
-    // })
-  }
->
-  count is: {ajouter}cookies
-</button>;
+        // setCount(42)
+        // setCount((prevCount) => {
+        //   console.log(prevCount);
+        //   return prevCount + 10;
+        // })
+      }
+    >
+      count is: {ajouter}
+      {props.Name}
+    </button>
+  );
 }
+export default Parameters;

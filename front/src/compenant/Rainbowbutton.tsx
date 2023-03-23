@@ -1,10 +1,13 @@
 import { useState } from 'react';
 
-function (){
-    const [count, setCount] = useState(0);
+function Changes(props: {Deb: number | string; Couleurs: string; Ajt : number | string; N: string | number }){
 
+    const [count, setCount] = useState(props.Deb);
+    return(
+
+    
 <button
-className="rainbow-button"
+className={props.Couleurs}
 type="button"
 onClick={() =>
   setCount((prevCount) => {
@@ -14,11 +17,13 @@ onClick={() =>
     console.log(prevCount);
     obj.itou = '123soleil';
     console.log(obj);
-    return prevCount + 1;
+    return prevCount {props.Ajt};
   })
 }
 >
-count is: {count}poney
+count is: {count}{N}
 </button>
-
+    )
 }
+
+export default Changes;

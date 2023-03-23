@@ -3,11 +3,11 @@ import logo from './logo.svg';
 import './App.css';
 import Welcome from './compenant/Parametyseredbutton';
 import ChatB from './compenant/ChatB';
+import Parameters from './compenant/Cookiesbutton';
+import Changes from './compenant/Rainbowbutton';
+import Exerc from './compenant/Etoiledemerbutton';
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  const [enplus, setEnplus] = useState('patate');
   let fun1 = () => 42;
   let fun2 = () => {
     return 'NYA';
@@ -49,21 +49,11 @@ function App() {
         <p>Vite + React + soupe + Airbnb + Husky = 🔥</p>
         <p>
           <br />
+          {<Parameters Start={0} Color= "water-button" Add={1} Name="Cookies"></Parameters>
+          <Changes Deb= "Nya" Couleurs= "rainbow-button"Ajt= {2}N="Poney" ></Changes>
+          <Exerc Quiere= Colores= "rainbow-button" Nombre= {pwett} Appelido= "Magie" ></Exerc>}
           <br />
         </p>
-        {/* un deux troi */}
-        {/* <button
-          className="water-button"
-          type="button"
-          onClick={() =>
-            setEnplus((nya) => {
-              return nya + ' nya';
-            })
-          }
-        >
-          Compteur de : {enplus} etoile de mer
-        </button> */}
-        {/* un deux troi */}
         <p>
           <a
             className="App-link"
@@ -108,5 +98,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
