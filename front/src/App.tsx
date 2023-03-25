@@ -8,6 +8,7 @@ import Changes from './compenant/Rainbowbutton';
 import Exerc from './compenant/Etoiledemerbutton';
 
 function App() {
+  // const [enplus, setEnplus] = useState('patate');
   let fun1 = () => 42;
   let fun2 = () => {
     return 'NYA';
