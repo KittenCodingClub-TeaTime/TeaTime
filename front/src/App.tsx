@@ -2,8 +2,9 @@ import { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Merbouton from './component/Merbouton';
-import { Welcome as Bonjour } from './component/Merbouton';
+// import { Welcome as Bonjour } from './component/Merbouton';
 import Chat from './component/Chat';
+import ChatRelodead from './component/ChatRelodead';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -46,6 +47,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Chat></Chat>
+        <ChatRelodead></ChatRelodead>
 
         <img src={logo} className="App-logo" alt="logo" />
         <p>Vite + React + soupe + Airbnb + Husky = 🔥</p>
