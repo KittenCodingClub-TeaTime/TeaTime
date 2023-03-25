@@ -49,11 +49,11 @@ function App() {
         <p>Vite + React + soupe + Airbnb + Husky = 🔥</p>
         <p>
           <br />
-          {<Parameters Start={0} Color= "water-button" Add={1} Name="Cookies"></Parameters>
-          <Changes Deb= "Nya" Couleurs= "rainbow-button"Ajt= {7} North="Poney" ></Changes>
-          <Exerc Quiere= {2} Colores= "rainbow-button" Nombre= {pwett} Appelido= "Magie" ></Exerc>}
           <br />
         </p>
+        <Parameters Start={0} Color="water-button" Add={1} Name="Cookies"></Parameters>
+        <Changes Deb="Nya" Couleurs="rainbow-button" Ajt={7} North="Poney"></Changes>
+        <Exerc Quiere={2} Colores="rainbow-button" Nombre={8} Appelido="Magie"></Exerc>
         <p>
           <a
             className="App-link"
