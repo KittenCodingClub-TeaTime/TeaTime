@@ -6,7 +6,16 @@ const ChatRelodead = () => {
   console.log(temara);
   return (
     <>
-      <p>{temara}</p>
+      <p>
+        {temara.map((element) => {
+          return (
+            <>
+              <br />
+              {element}
+            </>
+          );
+        })}
+      </p>
 
       <input
         value={value}
