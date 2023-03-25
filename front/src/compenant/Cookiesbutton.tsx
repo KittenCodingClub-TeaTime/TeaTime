@@ -1,15 +1,16 @@
 import { useState } from 'react';
 
 function Parameters(props: { Start: string | number; Color: string; Add: number | string; Name: string | number }) {
-  const [ajouter, setajouter] = useState(props.Start);
+  const { Start, Color, Add, Name } = props;
+  const [ajouter, setajouter] = useState(Start);
   return (
     <button
-      className={props.Color}
+      className={Color}
       type="button"
       onClick={
         () =>
           setajouter((preajouter: any) => {
-            return preajouter + props.Add;
+            return preajouter + Add;
           })
 
         // setCount(42)
@@ -20,7 +21,7 @@ function Parameters(props: { Start: string | number; Color: string; Add: number 
       }
     >
       count is: {ajouter}
-      {props.Name}
+      {Name}
     </button>
   );
 }

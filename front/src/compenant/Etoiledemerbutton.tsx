@@ -6,18 +6,19 @@ function Excerc(props: {
   Nombre: number | string;
   Appelido: string | number;
 }) {
-  const [enplus, setEnplus] = useState(props.Quiere);
+  const { Quiere, Colores, Nombre, Appelido } = props;
+  const [enplus, setEnplus] = useState(Quiere);
   return (
     <button
-      className={props.Colores}
+      className={Colores}
       type="button"
       onClick={() =>
         setEnplus((nya: any) => {
-          return nya + props.Nombre;
+          return nya + Nombre;
         })
       }
     >
-      Compteur de : {enplus} {props.Appelido}
+      Compteur de : {enplus} {Appelido}
     </button>
   );
 }

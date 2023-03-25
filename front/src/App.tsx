@@ -6,6 +6,7 @@ import ChatB from './compenant/ChatB';
 import Parameters from './compenant/Cookiesbutton';
 import Changes from './compenant/Rainbowbutton';
 import Exerc from './compenant/Etoiledemerbutton';
+import ChatReloaded from './compenant/ChatReloaded';
 
 function App() {
   // const [enplus, setEnplus] = useState('patate');
@@ -47,6 +48,7 @@ function App() {
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <ChatB></ChatB>
+        <ChatReloaded />
         <p>Vite + React + soupe + Airbnb + Husky = 🔥</p>
         <p>
           <br />

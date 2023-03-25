@@ -1,10 +1,11 @@
 import { useState } from 'react';
 
 function Changes(props: { Deb: number | string; Couleurs: string; Ajt: number | string; North: string | number }) {
-  const [count, setCount] = useState(props.Deb);
+  const { Deb, Couleurs, Ajt, North } = props;
+  const [count, setCount] = useState(Deb);
   return (
     <button
-      className={props.Couleurs}
+      className={Couleurs}
       type="button"
       onClick={() =>
         setCount((prevCount: any) => {
@@ -14,12 +15,12 @@ function Changes(props: { Deb: number | string; Couleurs: string; Ajt: number | 
           // console.log(prevCount);
           // obj.itou = '123soleil';
           // console.log(obj);
-          return prevCount + props.Ajt;
+          return prevCount + Ajt;
         })
       }
     >
       count is: {count}
-      {props.North}
+      {North}
     </button>
   );
 }
