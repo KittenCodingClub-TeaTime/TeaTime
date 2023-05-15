@@ -242,12 +242,18 @@ format your code. You might need to install prettier linter to have the possibil
 
 Indente ton code, qu'il soit plus lisible. Tu risque d'avoir besoin d'installer le linter prettier pour que ça fonctionne, et que tu ai la boite de dialogue pour choisir un linter, et ainsi forcer la mise en forme de ton code. C'est un bug courant de vscode depuis quelques années maintenant.
 
+## dot in github.com repos
+
+Allows to open a vscode interface from your browser when you click on the dot button on your keyboard -> .
+
+Ca ouvre une interface de vscode directement depuis ton navigateur web quand tu click sur la touche "point" sur la clavier -> .
+
+## ctrl + right or left arrow
+
+This key combination allows to move from word to word instead of char to chat, with the "suppr" touch or "delete", it also delete words per words
+
+Cette combinaison de touche permet de se déplacer de mot en mot au lieu de character par character, avec la touche "suppr" ou "delete" ça suppr par mot aussi
+
 ## Add yours below to remember them :)
 
 ## Ajoute les tiens ici, pour s'en souvenir :)
-
-Bonjour
-MyFeature
-PWETT
-
-
