@@ -49,11 +49,18 @@ function App() {
             className="rainbow-button"
             type="button"
             onClick={
-              () =>
+              () => {
                 setajouter((preajouter) => {
                   return preajouter + 1;
-                })
-
+                });
+                fetch('/api', { method: 'GET' }).then((result) => {
+                  console.log(result);
+                  result
+                    .json()
+                    .then(console.log)
+                    .catch((err) => {});
+                });
+              }
               // setCount(42)
               // setCount((prevCount) => {
               //   console.log(prevCount);
