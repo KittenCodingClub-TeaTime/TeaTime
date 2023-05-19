@@ -1,5 +1,9 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Register from './components/Register';
+import { useState } from 'react';
+import logo from './logo.svg';
+import './App.css';
+import Chat from './Components/Chat/Chat';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +20,7 @@ function App() {
   return (
     <div>
       <RouterProvider router={router} />
+        <Chat></Chat>
     </div>
   );
 }
