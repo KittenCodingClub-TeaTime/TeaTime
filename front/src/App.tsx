@@ -8,7 +8,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/',
-    element: <div className="text-center text-red border border-orange-500">Test</div>,
+    element: <div className="text-center text-red border border-orange-500  text-stone-400">Test</div>,
   },
 ]);
 
