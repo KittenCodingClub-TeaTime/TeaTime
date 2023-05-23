@@ -6,7 +6,7 @@ import { UpdateUserDto } from '@shared/dtos/users/update-users.dto';
 @Injectable()
 export class UsersService {
   constructor(private prisma: PrismaService) {}
-  async create(createUserDto: CreateUserDto) {
+  create(createUserDto: CreateUserDto) {
     // this.prisma.user.create({ data: { email: 'test' } })
     // Since id is in autoincrement, and name is facultative, thise is enough to create a new user
     this.prisma.user.create({ data: createUserDto });
