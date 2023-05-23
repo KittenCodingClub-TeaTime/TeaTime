@@ -7,10 +7,6 @@
     @apply border-4 border-gray-50 w-[30%] rounded-3xl py-20 px-7 min-w-max;
 }
 
-.profile_img {
-    @apply border-4 border-gray-100 w-[135px] h-28 object-cover rounded-full shadow-lg cursor-pointer;
-    @apply hover:border-gray-200;
-}
 
 .textbox {
     @apply border-0 px-5 py-4 rounded-xl w-3/4 shadow-sm text-lg;
@@ -24,6 +20,12 @@
 .btn:hover {
     background-color: #ff6a6a;
 }
+
+.error {
+    color: red;
+    margin: 0;
+    padding: 0;
+  }
 
 input[type='file']{
     display: none;
