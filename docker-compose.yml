@@ -24,11 +24,13 @@ services:
     build:
       context: ./back
       dockerfile: Dockerfile
+    env_file: ./back/.env
     volumes:
       - ./back/src:/svr/app/src:ro
       - ./back/test:/svr/app/test:ro
       - ./back/prisma:/svr/app/prisma:ro
       - ./back/shared:/svr/app/shared:ro
+      - back_node_module:/svr/app/node_modules/
     restart: unless-stopped
     depends_on:
       - database
@@ -39,8 +41,9 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./back/prisma:/svr/app/prisma:ro
+      - back_node_module:/svr/app/node_modules/
     env_file: ./back/.env
-    command: npx prisma migrate dev --schema=./prisma/schema.prisma --skip-generate
+    command: npx prisma migrate dev --schema=./prisma/schema.prisma
     depends_on:
       - database
 
@@ -72,3 +75,4 @@ services:
 
 volumes:
   db:
+  back_node_module:

@@ -1,3 +1,19 @@
+### Create a new CRUD by doing :
+
+```bash
+npx nest g mo
+npx nest g s
+npx nest g co
+```
+
+You can see what else you can generate by just typing "npx nest" into the terminal, and it will show you what it can do.
+
+### Testing
+
+spec.ts files are test files, we will work on them later. In the mean time, you don't need to care much for them.
+
+\***\*\_\_\*\*** base README from nest
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
