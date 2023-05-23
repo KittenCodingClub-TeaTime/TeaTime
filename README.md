@@ -1,5 +1,22 @@
 # TeaTime
 
+# Starting with a fresh repo :
+
+```bash
+	git clone https://github.com/KittenCodingClub-TeaTime/TeaTime.git
+```
+
+Then if you are on unix distro do
+
+```bash
+	cd TeaTime
+	sh tools/quick_setup.sh
+```
+
+If not, go manually into that file, copy its content and paste it in your terminal
+
+I invite you to read this script further to know what actually is needed when starting afresh.
+
 # command line terminal
 
 \_\_\_\_en
