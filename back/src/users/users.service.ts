@@ -7,7 +7,6 @@ import { UpdateUserDto } from '@shared/dtos/users/update-users.dto';
 export class UsersService {
   constructor(private prisma: PrismaService) {}
   async create(createUserDto: CreateUserDto) {
-    console.log(await this.prisma.user.create({ data: { email: 'test' } }));
     // this.prisma.user.create({ data: { email: 'test' } })
     // Since id is in autoincrement, and name is facultative, thise is enough to create a new user
     this.prisma.user.create({ data: createUserDto });
