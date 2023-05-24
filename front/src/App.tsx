@@ -13,13 +13,13 @@ const router = createBrowserRouter([
   },
   {
     path: '/',
-    element: <div className="border border-red-600 text-center bg-red">TEST </div>,
+    element: <div className="text-center text-red border border-orange-500  text-stone-400">Test</div>,
   },
 ]);
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <RouterProvider router={router} />
     </div>
   );
