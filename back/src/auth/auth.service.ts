@@ -14,6 +14,7 @@ export class AuthService {
     if (foundUser) {
       throw new BadRequestException('Email already exists');
     }
+
     const hashedPassword = await this.hashPassword(password);
 
     await this.prisma.user.create({
@@ -23,7 +24,7 @@ export class AuthService {
       },
     });
 
-    return { message: 'signup was successfull' };
+    return { message: 'Use register sucessfully' };
   }
   async signin() {
     return '';

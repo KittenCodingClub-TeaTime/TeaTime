@@ -9,7 +9,7 @@ export class UsersService {
   create(createUserDto: CreateUserDto) {
     // this.prisma.user.create({ data: { email: 'test' } })
     // Since id is in autoincrement, and name is facultative, thise is enough to create a new user
-    this.prisma.user.create({ data: createUserDto });
+    // this.prisma.user.create({ data: createUserDto });
     return 'This action adds a new user';
   }
 
