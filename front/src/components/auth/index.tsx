@@ -36,9 +36,9 @@ const Auth: FC<indexProps> = ({ handleSave, zodSchema, params, inputs }) => {
           </div>
 
           <form className="py-1" onSubmit={handleSubmit(handleSave)}>
-            <div className="textbox flex flex-col items-center gap-4">
-              {inputs.map((inputItem) => (
-                <>
+            <div className="textbox flex flex-col items-center justify-center gap-4">
+              {inputs.map((inputItem, index) => (
+                <div key={index} className="w-full flex justify-center">
                   <input
                     {...register(inputItem.text)}
                     className={styles.textbox}
@@ -46,7 +46,7 @@ const Auth: FC<indexProps> = ({ handleSave, zodSchema, params, inputs }) => {
                     placeholder={inputItem.text}
                   />
                   {errors[inputItem.text] && <p className={styles.error}>{errors[inputItem.text]?.message}</p>}
-                </>
+                </div>
               ))}
               <button className={styles.btn} type="submit">
                 {params.text}

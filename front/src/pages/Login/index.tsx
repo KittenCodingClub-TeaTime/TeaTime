@@ -12,7 +12,7 @@ const Login: FC = ({}) => {
   };
 
   const inputs: InputsType = [
-    { text: 'username', type: 'text' },
+    { text: 'name', type: 'text' },
     { text: 'password', type: 'password' },
   ];
 

@@ -7,24 +7,27 @@ import * as bcrypt from 'bcrypt';
 export class AuthService {
   constructor(private prisma: PrismaService) {}
   async signup(dto: AuthDto) {
-    const { email, password } = dto;
-
+    const { email, password, name } = dto;
+    console.log('dto', dto);
     const foundUser = await this.prisma.user.findUnique({ where: { email } });
 
     if (foundUser) {
+      console.log('HERE BITCH');
       throw new BadRequestException('Email already exists');
     }
-
-    const hashedPassword = await this.hashPassword(password);
-
-    await this.prisma.user.create({
-      data: {
-        email,
-        hashedPassword,
-      },
-    });
-
-    return { message: 'Use register sucessfully' };
+    try {
+      const hashedPassword = await this.hashPassword(password);
+      await this.prisma.user.create({
+        data: {
+          email,
+          name,
+          hashedPassword,
+        },
+      });
+      return { message: 'User register sucessfully' };
+    } catch (error) {
+      throw new BadRequestException('Email already exists');
+    }
   }
   async signin() {
     return '';
