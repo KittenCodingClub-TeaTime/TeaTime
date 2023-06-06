@@ -9,6 +9,7 @@ import { InputsType, RegisterUserTypes } from '../../types';
 interface indexProps {
   handleSave: any;
   zodSchema: any;
+  isLoading: boolean;
   params: {
     text: string;
     redirection: string;
@@ -16,7 +17,7 @@ interface indexProps {
   inputs: InputsType;
 }
 
-const Auth: FC<indexProps> = ({ handleSave, zodSchema, params, inputs }) => {
+const Auth: FC<indexProps> = ({ handleSave, isLoading, zodSchema, params, inputs }) => {
   const {
     register,
     handleSubmit,
@@ -24,6 +25,7 @@ const Auth: FC<indexProps> = ({ handleSave, zodSchema, params, inputs }) => {
   } = useForm<RegisterUserTypes>({
     resolver: zodResolver(zodSchema),
   });
+
   return (
     <div className="container mx-auto">
       <Toaster position="top-center" reverseOrder={false}></Toaster>
@@ -49,7 +51,7 @@ const Auth: FC<indexProps> = ({ handleSave, zodSchema, params, inputs }) => {
                 </div>
               ))}
               <button className={styles.btn} type="submit">
-                {params.text}
+                {isLoading ? "En cours d'enregistrement" : params.text}
               </button>
             </div>
 

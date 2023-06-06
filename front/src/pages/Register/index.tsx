@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import toast from 'react-hot-toast';
 import Auth from '../../components/auth';
 import { registerSchema } from '../../helpers/schemas/user';
 import { InputsType } from '../../types';
@@ -10,7 +9,6 @@ const Register: FC = ({}) => {
 
   const handleSave = async (userInformations: any) => {
     mutate(userInformations);
-    isLoading && toast.loading("Enregistrement de l'utilisateur en cours");
   };
 
   const inputs: InputsType = [
@@ -25,7 +23,9 @@ const Register: FC = ({}) => {
     redirection: 'login',
   };
 
-  return <Auth handleSave={handleSave} zodSchema={registerSchema} params={params} inputs={inputs} />;
+  return (
+    <Auth isLoading={isLoading} handleSave={handleSave} zodSchema={registerSchema} params={params} inputs={inputs} />
+  );
 };
 
 export default Register;
