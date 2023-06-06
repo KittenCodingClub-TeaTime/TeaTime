@@ -21,7 +21,7 @@ const Login: FC = ({}) => {
     redirection: 'register',
   };
 
-  return <Auth handleSave={handleSave} zodSchema={loginSchema} params={params} inputs={inputs} />;
+  return <Auth isLoading={false} handleSave={handleSave} zodSchema={loginSchema} params={params} inputs={inputs} />;
 };
 
 export default Login;
