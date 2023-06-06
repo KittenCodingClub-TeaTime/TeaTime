@@ -3,33 +3,14 @@ import toast from 'react-hot-toast';
 import Auth from '../../components/auth';
 import { registerSchema } from '../../helpers/schemas/user';
 import { InputsType } from '../../types';
-
-async function callAPI(payload: any) {
-  return fetch(`http://localhost/api/${payload.endPoint}`, {
-    method: payload.method,
-    mode: 'cors',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(payload.body),
-  });
-}
+import { userRegisterMutation } from '../../hooks';
 
 const Register: FC = ({}) => {
-  const handleSave = async (data: any) => {
-    const payload = {
-      method: 'POST',
-      body: data,
-      endPoint: 'auth/signup',
-    };
-    const response = await callAPI(payload);
-    const json = await response.json();
-    if (json.error) {
-      toast.error(json.message);
-    } else {
-      toast.success(json.message);
-    }
+  const { mutate, isLoading } = userRegisterMutation();
+
+  const handleSave = async (userInformations: any) => {
+    mutate(userInformations);
+    isLoading && toast.loading("Enregistrement de l'utilisateur en cours");
   };
 
   const inputs: InputsType = [

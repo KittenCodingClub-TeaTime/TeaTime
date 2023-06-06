@@ -38,7 +38,7 @@ const Auth: FC<indexProps> = ({ handleSave, zodSchema, params, inputs }) => {
           <form className="py-1" onSubmit={handleSubmit(handleSave)}>
             <div className="textbox flex flex-col items-center justify-center gap-4">
               {inputs.map((inputItem, index) => (
-                <div key={index} className="w-full flex justify-center">
+                <div key={index} className="w-full flex flex-col items-center justify-center">
                   <input
                     {...register(inputItem.text)}
                     className={styles.textbox}
