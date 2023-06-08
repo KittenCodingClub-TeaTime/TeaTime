@@ -3,19 +3,22 @@ import toast from 'react-hot-toast';
 import axios from 'axios';
 import { RegisterUserTypes } from '../types';
 import { useNavigate } from 'react-router-dom';
+import { useAuthStore } from '../store/store';
 
-export const userRegisterMutation = () => {
+export const userSigninQuery = () => {
+  const setUserInfos = useAuthStore((state: any) => state.setUserInfos);
   const navigate = useNavigate();
   const { mutate, isLoading } = useMutation({
-    mutationFn: async (userInformations: Pick<RegisterUserTypes, 'name' | 'password' | 'email'>) => {
-      const { password, name, email } = userInformations;
-      const { data } = await axios.post('http://localhost/api/auth/signup', { password, name, email });
+    mutationFn: async (userInformations: Pick<RegisterUserTypes, 'password' | 'email'>) => {
+      const { password, email } = userInformations;
+      const { data } = await axios.post('http://localhost/api/auth/signin', { password, email });
       return data;
     },
     onSuccess(data: any) {
       toast.success(data.message);
+      setUserInfos(data.body);
       setTimeout(() => {
-        navigate('/login');
+        navigate('/');
       }, 1000);
     },
     onError(err: any) {

@@ -41,7 +41,6 @@ export class AuthService {
     res: Response,
   ) {
     const { email, password } = dto;
-    console.log('ICI', dto);
     const foundUser = await this.prisma.user.findUnique({ where: { email } });
 
     if (!foundUser) {
@@ -67,7 +66,10 @@ export class AuthService {
     }
     res.cookie('token', token);
 
-    return res.send({ message: 'Logged in successfully' });
+    return res.send({
+      message: 'Logged in successfully',
+      body: { email: foundUser.email, name: foundUser.name },
+    });
   }
 
   async signout(req: Request, res: Response) {
@@ -88,6 +90,25 @@ export class AuthService {
   async signToken(args: { id: number; email: string }) {
     const payload = args;
 
-    return this.jwt.signAsync(payload, { secret: jwtSecret });
+    return this.jwt.signAsync(payload, { secret: jwtSecret, expiresIn: '24h' });
+  }
+
+  async authenticate(dto: { token: string }, res: Response) {
+    const { token } = dto;
+    const userInfos = this.jwt.verify(token, { secret: jwtSecret });
+    const foundUser = await this.prisma.user.findUnique({
+      where: { email: userInfos.email },
+    });
+
+    if (!foundUser) {
+      throw new BadRequestException('Veuillez vous reconnecter');
+    }
+
+    const userInformations = { email: foundUser.email, name: foundUser.name };
+
+    return res.send({
+      message: 'Authenticated',
+      body: userInformations,
+    });
   }
 }

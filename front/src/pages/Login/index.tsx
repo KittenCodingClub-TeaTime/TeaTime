@@ -1,27 +1,12 @@
 import { FC } from 'react';
-import toast from 'react-hot-toast';
-import Auth from '../../components/auth';
+import { Auth } from '../../components';
 import { loginSchema } from '../../helpers/schemas/user';
 import { InputsType } from '../../types';
-import axios from 'axios';
-import { useMutation } from '@tanstack/react-query';
-import { RegisterUserTypes } from '../../types';
+import { userSigninQuery } from '../../hooks';
 
 const Login: FC = ({}) => {
-  const { mutate, isLoading } = useMutation({
-    mutationFn: async (userInformations: Pick<RegisterUserTypes, 'password' | 'email'>) => {
-      console.log(userInformations);
-      const { password, email } = userInformations;
-      const { data } = await axios.post('http://localhost/api/auth/signin', { password, email });
-      return data;
-    },
-    onSuccess(data: any) {
-      toast.success(data.message);
-    },
-    onError(err: any) {
-      toast.error(err.response.data.message || err.message);
-    },
-  });
+  const { mutate, isLoading } = userSigninQuery();
+
   const handleSave = (userInformations: any) => {
     mutate(userInformations);
   };

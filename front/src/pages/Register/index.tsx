@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import Auth from '../../components/auth';
+import { Auth } from '../../components';
 import { registerSchema } from '../../helpers/schemas/user';
 import { InputsType } from '../../types';
 import { userRegisterMutation } from '../../hooks';
