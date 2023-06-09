@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Register from './components/Register';
+import MainScene from './scenes/MainScene';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ function App() {
   return (
     <div>
       <RouterProvider router={router} />
+      <MainScene></MainScene>
     </div>
   );
 }
