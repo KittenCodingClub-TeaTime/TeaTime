@@ -18,7 +18,8 @@
   },
   "paths": {
     "@/*": ["./src/*"],
-    "@/components/*": ["./src/components/*"]
+    "@/components/*": ["./src/components/*"],
+    "@/types/*": ["./src/types/*"],
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

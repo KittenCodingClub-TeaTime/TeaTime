@@ -4,5 +4,6 @@
   "trailingComma": "all",
   "singleQuote": true,
   "useTabs": false,
+  "endOfLine": "auto",
   "printWidth": 120
 }
