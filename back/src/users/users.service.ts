@@ -37,8 +37,10 @@ export class UsersService {
     return hashedPassword;
   }
 
-  findAll() {
-    return `This action returns all users`;
+  async findAll() {
+    return await this.prisma.user.findMany({
+      select: { id: true, email: true, name: true },
+    });
   }
 
   findOne(id: number) {

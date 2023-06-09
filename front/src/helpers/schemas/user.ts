@@ -13,6 +13,6 @@ export const registerSchema = z
   });
 
 export const loginSchema = z.object({
-  name: z.string().min(4, 'Name doit contenir au moins 4 characters'),
+  email: z.string().email({ message: 'Adresse mail invalide' }),
   password: z.string().min(6, { message: 'Password must be atleast 6 characters' }),
 });

@@ -1,29 +1,20 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import MainScene from './scenes/MainScene';
-
-const router = createBrowserRouter([
-  {
-    path: '/register',
-    element: <Register />,
-  },
-  {
-    path: '/login',
-    element: <Login />,
-  },
-  {
-    path: '/',
-    element: <div className="text-center text-red border border-orange-500  text-stone-400">Test</div>,
-  },
-]);
-
+import { useEffect } from 'react';
+import { Outlet } from 'react-router-dom';
+import { authenticateUserQuery } from './hooks';
+import { Navbar } from './components';
 function App() {
+  const { mutate, isLoading } = authenticateUserQuery();
+
+  useEffect(() => {
+    mutate();
+  }, []);
   return (
-    <div>
-      <RouterProvider router={router} />
-      <MainScene></MainScene>
-    </div>
+    <main>
+      <Navbar />
+      <div>
+        <Outlet />
+      </div>
+    </main>
   );
 }
 
