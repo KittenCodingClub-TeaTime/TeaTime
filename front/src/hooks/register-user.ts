@@ -9,7 +9,7 @@ export const userRegisterMutation = () => {
   const { mutate, isLoading } = useMutation({
     mutationFn: async (userInformations: Pick<RegisterUserTypes, 'name' | 'password' | 'email'>) => {
       const { password, name, email } = userInformations;
-      const { data } = await axios.post('http://localhost/api/auth/signup', { password, name, email });
+      const { data } = await axios.post('http://localhost/api/users', { password, name, email });
       return data;
     },
     onSuccess(data: any) {

@@ -1,7 +1,8 @@
 import { FC } from 'react';
+import MainScene from '../../scenes/MainScene';
 
 const Dashboard: FC = ({}) => {
-  return <div>Hello There</div>;
+  return <MainScene></MainScene>;
 };
 
 export default Dashboard;
