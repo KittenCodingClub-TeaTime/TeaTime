@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import toast from 'react-hot-toast';
-import Auth from '../../components/Auth';
+import Auth from '../../components/auth';
 import { loginSchema } from '../../helpers/schemas/user';
 import { InputsType } from '../../types';
 
