@@ -250,7 +250,7 @@ Ca ouvre une interface de vscode directement depuis ton navigateur web quand tu 
 
 ## ctrl + right or left arrow
 
-This key combination allows to move from word to word instead of char to chat, with the "suppr" touch or "delete", it also delete words per words
+This key combination allows to move from word to word instead of char to char, with the "suppr" touch or "delete", it also delete words per words
 
 Cette combinaison de touche permet de se déplacer de mot en mot au lieu de character par character, avec la touche "suppr" ou "delete" ça suppr par mot aussi
 
