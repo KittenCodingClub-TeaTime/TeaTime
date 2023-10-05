@@ -52,6 +52,28 @@ la commande \[pwett] a été lancée sans arguments.
 
 ## GIT
 
+### What is GIT ?
+Git is a software that does "version control" that mean that instead of having you, the user having to save your previous files in some kind of disorganized way, like having a project_02_02_2022, project_03_02_2022 and so on if you want to see the previous state of what you did, GIT will allow you to have access to your changes at all time. It also allow you to share them online with github for example.
+Here is how you use it : 
+- create an account on github, this need to happen only once, then your account is for life
+- Create a repository from github, for each project. If you code an app for doing a to do list app, do not put it in the same repository as the cooking suggestion app you might code, it's just easier for you to find what you did then. Set up public repository for now. Select the option to set up a readme inside the repository from the beginning.
+- Clone the repository, or "repo" on your machine, to be able to send stuff to github. So open the terminal from vscode, send ```ls``` command to see in which folder you are, if you want to set up your repo in a specific folder, use the command ```cd``` to move from inside the terminal. Like ```cd ~/Documents``` should put you in the Documents folder if I didn't do a mistake. To clone the repository locally, the command is
+```git clone ...``` where ... is the web adress of the repo.
+- Then the repository will exist on your computer as a folder, you will write your code in this folder, open vscode from this folder. Might be something like file, open folder.
+- I know it sounds complicated, just send me a message if it's too much, might be better for me to explain it to you first directly.
+- The command ```git status``` tell you which changes are ready to go online or not.
+- The command ```git add``` let you add new file to be sent online (add the path of the file in the command after add)
+- The command ``` git commit ``` let you prepare a local save of file, so that you can send them online later add the argument -m"Your commit message" to name your save describing the changes you made
+- The command ```git push``` let you send the saves you made locally online.
+- 
+Read well what git tell you on each command, it might complain or ask you to register on you computer or some other stuff. It gives you valuable information in the terminal.
+
+You can't save changes if you didn't make any ( well you can, but that a story for another day) so add a file into you repo on you computer, and try to send it online
+
+See the rest of this document for more info !
+
+### C'est quoi GIT ?
+--- flemme de traduire là
 ### See the state of what you are about to save locally :
 
 ### Voir les fichiers que tu es sur le point de sauvegqrder sur ta machine :
